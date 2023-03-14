@@ -4,8 +4,11 @@ A Detective Doctor game where you must figure out your patients supernatural dis
 # TODO
 - [ ] Core Game Loop
   - [ ] Character Controller
+    - [x] Moving Around
     - [ ] Combat
   - [ ] Enemies
+    - [ ] Moving Around
+    - [ ] Taking Damage
     - [ ] Enemies Attacking
   - [ ] Brewing Potions [Good/Bad]
     - [ ] Gathering Ingredients
@@ -16,6 +19,8 @@ A Detective Doctor game where you must figure out your patients supernatural dis
     - [ ] Inventory
     - [ ] World
   - [ ] Dialogue
+    - [ ] Characters Talking
     - [ ] Asking Questions
   - [ ] Environment
+    - [ ] Scenes
     - [ ] Enter Buildings

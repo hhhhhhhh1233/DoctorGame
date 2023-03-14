@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://car1tw3uv2pid"]
+
+[ext_resource type="Script" path="res://PlayerController.gd" id="1_jcew8"]
+[ext_resource type="Texture2D" uid="uid://cgbm4bd554pyh" path="res://icon.svg" id="2_citiy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7t520"]
+radius = 32.0
+height = 128.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_renh4"]
+size = Vector2(50, 80)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(576, 248)
+script = ExtResource("1_jcew8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.05991e-06, 0)
+scale = Vector2(0.5, 1)
+texture = ExtResource("2_citiy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7t520")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+editor_draw_drag_margin = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(64, 8)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_renh4")

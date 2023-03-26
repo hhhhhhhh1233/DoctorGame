@@ -8,11 +8,12 @@ radius = 32.0
 height = 128.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_renh4"]
-size = Vector2(50, 80)
+size = Vector2(48, 80)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(576, 248)
 script = ExtResource("1_jcew8")
+JUMP_VELOCITY = -600.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-9.05991e-06, 0)
@@ -25,11 +26,20 @@ shape = SubResource("CapsuleShape2D_7t520")
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.7
 editor_draw_drag_margin = true
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(64, 8)
+[node name="HurtboxContainer" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="HurtboxContainer"]
+position = Vector2(56, 8)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxContainer/Area2D"]
 shape = SubResource("RectangleShape2D_renh4")
+
+[node name="Icon" type="Sprite2D" parent="HurtboxContainer/Area2D"]
+position = Vector2(-7.62939e-06, 3.8147e-06)
+scale = Vector2(0.375, 0.625)
+texture = ExtResource("2_citiy")

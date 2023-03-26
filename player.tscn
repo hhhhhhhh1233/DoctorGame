@@ -23,13 +23,6 @@ texture = ExtResource("2_citiy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_7t520")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_top_margin = 0.7
-editor_draw_drag_margin = true
-
 [node name="HurtboxContainer" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="HurtboxContainer"]

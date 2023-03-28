@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnu4lhhsju634"]
 
-[ext_resource type="Texture2D" uid="uid://cgbm4bd554pyh" path="res://icon.svg" id="1_8a2fh"]
 [ext_resource type="PackedScene" uid="uid://car1tw3uv2pid" path="res://player.tscn" id="1_yy8mo"]
+[ext_resource type="PackedScene" uid="uid://du3pc0xn31qhu" path="res://enemy.tscn" id="3_4sh1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbcps"]
-size = Vector2(392, 32)
+size = Vector2(493.333, 31.9682)
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,8 +13,8 @@ SPEED = 500.0
 JUMP_VELOCITY = -800.0
 
 [node name="Camera" type="Camera2D" parent="Player"]
-limit_left = -50
-limit_right = 1200
+limit_left = -300
+limit_right = 1450
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
@@ -24,12 +24,11 @@ editor_draw_drag_margin = true
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(568, 552)
 scale = Vector2(3, 1)
+collision_mask = 0
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(4, 0)
-scale = Vector2(3.0625, 0.25)
-texture = ExtResource("1_8a2fh")
+[node name="Polygon2D" type="Polygon2D" parent="Ground"]
+polygon = PackedVector2Array(-242.667, -16, -242.667, 16, 250.667, 16, 250.667, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(4, 0)
@@ -38,41 +37,43 @@ shape = SubResource("RectangleShape2D_wbcps")
 [node name="Ground2" type="StaticBody2D" parent="."]
 position = Vector2(840, 408)
 scale = Vector2(0.683, 1)
+collision_mask = 0
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground2"]
-position = Vector2(4, 0)
-scale = Vector2(3.0625, 0.25)
-texture = ExtResource("1_8a2fh")
+[node name="Polygon2D" type="Polygon2D" parent="Ground2"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
-position = Vector2(4, 0)
+position = Vector2(-0.00012207, 0)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
-position = Vector2(8, 200)
+position = Vector2(-136, 192)
 scale = Vector2(0.0975536, -23.2731)
+collision_mask = 0
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="LeftWall"]
-position = Vector2(4, 0)
-scale = Vector2(3.0625, 0.25)
-texture = ExtResource("1_8a2fh")
+[node name="Polygon2D" type="Polygon2D" parent="LeftWall"]
+polygon = PackedVector2Array(-246.019, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.019, -16.156)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
-position = Vector2(4, 0)
+position = Vector2(0, -0.171873)
 shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="RightWall" type="StaticBody2D" parent="."]
-position = Vector2(1152, 200)
+position = Vector2(1296, 192)
 scale = Vector2(0.0975536, -23.2731)
+collision_mask = 0
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="RightWall"]
-position = Vector2(4, 0)
-scale = Vector2(3.0625, 0.25)
-texture = ExtResource("1_8a2fh")
+[node name="Polygon2D" type="Polygon2D" parent="RightWall"]
+polygon = PackedVector2Array(-246.02, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.02, -16.156)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(4, 0)
+position = Vector2(0, -0.171873)
 shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Enemy" parent="." instance=ExtResource("3_4sh1d")]
+position = Vector2(240, 416)

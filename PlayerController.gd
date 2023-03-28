@@ -3,10 +3,17 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
-
+var health = 3
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func DecreaseHealth():
+	health -= 1
+	$Polygon2D.modulate = Color(1, 0, 0)
+	await get_tree().create_timer(0.1).timeout
+	$Polygon2D.modulate = Color(1, 1, 1)
+	if health == 0:
+		queue_free()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -18,7 +25,8 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_pressed("Attack"):
-		print("Attack!")
+		for i in $HurtboxContainer/Area2D.get_overlapping_bodies():
+			i.DecreaseHealth();
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Left", "Right")

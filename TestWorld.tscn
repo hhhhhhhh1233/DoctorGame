@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnu4lhhsju634"]
+[gd_scene load_steps=5 format=3 uid="uid://cnu4lhhsju634"]
 
 [ext_resource type="PackedScene" uid="uid://car1tw3uv2pid" path="res://player.tscn" id="1_yy8mo"]
+[ext_resource type="Script" path="res://PauseManager.gd" id="3_3vvnl"]
 [ext_resource type="PackedScene" uid="uid://du3pc0xn31qhu" path="res://enemy.tscn" id="3_4sh1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbcps"]
@@ -20,6 +21,18 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_top_margin = 0.7
 editor_draw_drag_margin = true
+
+[node name="Panel" type="Panel" parent="Player/Camera"]
+visible = false
+offset_left = -80.0
+offset_top = -16.0
+offset_right = 80.0
+offset_bottom = 24.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player/Camera/Panel"]
+offset_right = 160.0
+offset_bottom = 40.0
+text = "            Paused"
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(568, 552)
@@ -77,3 +90,7 @@ shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="Enemy" parent="." instance=ExtResource("3_4sh1d")]
 position = Vector2(240, 416)
+
+[node name="PauseManager" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("3_3vvnl")

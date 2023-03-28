@@ -34,4 +34,11 @@ shape = SubResource("RectangleShape2D_8n6ik")
 color = Color(0.788235, 0.239216, 0.917647, 1)
 polygon = PackedVector2Array(24, -24, 24, 24, -24, 24, -24, -24)
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Enemy"
+
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

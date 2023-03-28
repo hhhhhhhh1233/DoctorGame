@@ -25,8 +25,11 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	if Input.is_action_just_pressed("Attack"):
+		$HurtboxContainer/Area2D/Polygon2D.modulate = Color(1,0,0)
 		for i in $HurtboxContainer/Area2D.get_overlapping_bodies():
 			i.DecreaseHealth();
+		await get_tree().create_timer(0.1).timeout
+		$HurtboxContainer/Area2D/Polygon2D.modulate = Color(1,1,1)
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Left", "Right")

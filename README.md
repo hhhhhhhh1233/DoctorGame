@@ -6,8 +6,8 @@ A Detective Doctor game where you must figure out your patients supernatural dis
   - [x] Character Controller
     - [x] Moving Around
     - [x] Combat
-  - [ ] Enemies
-    - [ ] Moving Around
+  - [x] Enemies
+    - [x] Moving Around
     - [x] Taking Damage
     - [x] Enemies Dealing Damage
   - [ ] Brewing Potions [Good/Bad]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dr33yfph6wx08"]
 
-[ext_resource type="Script" path="res://test_enemy.gd" id="1_sbaht"]
+[ext_resource type="Script" path="res://scripts/test_enemy.gd" id="1_j32gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhd25"]
 size = Vector2(48, 48)
@@ -11,7 +11,7 @@ size = Vector2(64, 56)
 [node name="TestEnemy" type="CharacterBody2D"]
 collision_layer = 20
 collision_mask = 3
-script = ExtResource("1_sbaht")
+script = ExtResource("1_j32gi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nhd25")

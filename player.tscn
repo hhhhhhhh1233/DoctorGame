@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://car1tw3uv2pid"]
 
-[ext_resource type="Script" path="res://PlayerController.gd" id="1_jcew8"]
+[ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_relwl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7t520"]
 radius = 32.0
@@ -13,7 +13,7 @@ size = Vector2(72, 80)
 position = Vector2(576, 248)
 collision_layer = 18
 collision_mask = 5
-script = ExtResource("1_jcew8")
+script = ExtResource("1_relwl")
 JUMP_VELOCITY = -1000.0
 
 [node name="Polygon2D" type="Polygon2D" parent="."]

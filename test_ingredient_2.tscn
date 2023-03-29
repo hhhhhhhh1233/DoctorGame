@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bme7ps3j2ykee"]
 
-[ext_resource type="Script" path="res://test_ingredient_2.gd" id="1_8md7b"]
+[ext_resource type="Script" path="res://scripts/test_ingredient_2.gd" id="1_81o6l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soyq8"]
 size = Vector2(48, 48)
@@ -8,7 +8,7 @@ size = Vector2(48, 48)
 [node name="test_ingredient2" type="Area2D"]
 collision_layer = 32
 collision_mask = 2
-script = ExtResource("1_8md7b")
+script = ExtResource("1_81o6l")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(1, 0.454902, 0.494118, 1)

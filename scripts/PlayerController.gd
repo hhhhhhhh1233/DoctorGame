@@ -9,15 +9,21 @@ var ingredients = {"Foraged": 0, "Enemy": 0}
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var knockback = 0
 
-
+func _ready():
+	$"../CanvasLayer/HUD/Health".text = str(health)
+	
 func DecreaseHealth(knockbackDirection):
 	health -= 1
+	$"../CanvasLayer/HUD/Health".text = str(health)
 	knockback = knockbackDirection
 	$Polygon2D.modulate = Color(1, 0, 0)
 	await get_tree().create_timer(0.1).timeout
 	$Polygon2D.modulate = Color(1, 1, 1)
 	knockback = 0
 	if health == 0:
+		$"../CanvasLayer/HUD".hide()
+		$"../CanvasLayer/DeathScreen".show()
+		$"../CanvasLayer/DeathScreen/RestartButton".grab_focus()
 		queue_free()
 
 func _physics_process(delta):

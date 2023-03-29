@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ipfxhwtue4m6"]
+[gd_scene load_steps=7 format=3 uid="uid://ipfxhwtue4m6"]
 
 [ext_resource type="Script" path="res://scripts/PauseManager.gd" id="1_4tyc4"]
 [ext_resource type="PackedScene" uid="uid://car1tw3uv2pid" path="res://player.tscn" id="1_yy8mo"]
+[ext_resource type="Script" path="res://GameManager.gd" id="2_a5xye"]
 [ext_resource type="PackedScene" uid="uid://dr33yfph6wx08" path="res://test_enemy.tscn" id="3_ejc55"]
 [ext_resource type="PackedScene" uid="uid://b5utjxrcgh5tm" path="res://test_ingredient.tscn" id="4_03ede"]
 
@@ -13,6 +14,9 @@ size = Vector2(493.333, 31.9682)
 [node name="PauseManager" type="Node" parent="."]
 process_mode = 3
 script = ExtResource("1_4tyc4")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("2_a5xye")
 
 [node name="Player" parent="." instance=ExtResource("1_yy8mo")]
 position = Vector2(8, 80)
@@ -27,266 +31,6 @@ drag_vertical_enabled = true
 drag_top_margin = 1.0
 drag_bottom_margin = 0.6
 editor_draw_drag_margin = true
-
-[node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(568, 552)
-scale = Vector2(3, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground"]
-polygon = PackedVector2Array(-242.667, -16, -242.667, 16, 250.667, 16, 250.667, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-position = Vector2(4, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground5" type="StaticBody2D" parent="."]
-position = Vector2(2048, 552)
-scale = Vector2(3, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground5"]
-polygon = PackedVector2Array(-242.667, -16, -242.667, 16, 250.667, 16, 250.667, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground5"]
-position = Vector2(4, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground2" type="StaticBody2D" parent="."]
-position = Vector2(344, 88)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground2"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground3" type="StaticBody2D" parent="."]
-position = Vector2(704, 216)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground3"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground4" type="StaticBody2D" parent="."]
-position = Vector2(1104, 344)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground4"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground4"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground6" type="StaticBody2D" parent="."]
-position = Vector2(1520, 520)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground6"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground6"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground7" type="StaticBody2D" parent="."]
-position = Vector2(1520, 488)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground7"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground7"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground8" type="StaticBody2D" parent="."]
-position = Vector2(1520, 456)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground8"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground8"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground18" type="StaticBody2D" parent="."]
-position = Vector2(1904, 256)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground18"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground18"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground9" type="StaticBody2D" parent="."]
-position = Vector2(2288, 520)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground9"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground9"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground10" type="StaticBody2D" parent="."]
-position = Vector2(2288, 488)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground10"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground10"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground11" type="StaticBody2D" parent="."]
-position = Vector2(2288, 456)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground11"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground11"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground12" type="StaticBody2D" parent="."]
-position = Vector2(2616, 520)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground12"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground12"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground13" type="StaticBody2D" parent="."]
-position = Vector2(2616, 488)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground13"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground13"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground14" type="StaticBody2D" parent="."]
-position = Vector2(2616, 456)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground14"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground14"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground15" type="StaticBody2D" parent="."]
-position = Vector2(2616, 424)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground15"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground15"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground16" type="StaticBody2D" parent="."]
-position = Vector2(2616, 392)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground16"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground16"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="Ground17" type="StaticBody2D" parent="."]
-position = Vector2(2616, 360)
-scale = Vector2(0.683, 1)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="Ground17"]
-polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground17"]
-position = Vector2(-0.00012207, 0)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="LeftWall" type="StaticBody2D" parent="."]
-position = Vector2(-136, 192)
-scale = Vector2(0.0975536, -23.2731)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="LeftWall"]
-polygon = PackedVector2Array(-246.019, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.019, -16.156)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
-position = Vector2(0, -0.171873)
-shape = SubResource("RectangleShape2D_wbcps")
-
-[node name="RightWall" type="StaticBody2D" parent="."]
-position = Vector2(2776, 192)
-scale = Vector2(0.0975536, -23.2731)
-collision_mask = 0
-metadata/_edit_group_ = true
-
-[node name="Polygon2D" type="Polygon2D" parent="RightWall"]
-polygon = PackedVector2Array(-246.02, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.02, -16.156)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(0, -0.171873)
-shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
@@ -341,23 +85,346 @@ focus_neighbor_top = NodePath("../ResumeButton")
 focus_neighbor_bottom = NodePath("../ResumeButton")
 text = "Quit"
 
-[node name="TestEnemy" parent="." instance=ExtResource("3_ejc55")]
-position = Vector2(1600, 400)
+[node name="HUD" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="TestEnemy2" parent="." instance=ExtResource("3_ejc55")]
-position = Vector2(688, 160)
+[node name="Health" type="RichTextLabel" parent="CanvasLayer/HUD"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 192.0
+theme_override_font_sizes/normal_font_size = 129
+text = "0"
 
-[node name="test_ingredient" parent="." instance=ExtResource("4_03ede")]
+[node name="DeathScreen" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DeathScreen"]
+layout_mode = 0
+offset_right = 308.0
+offset_bottom = 72.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Game Over!"
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/DeathScreen"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 80.0
+offset_right = 220.0
+offset_bottom = 128.0
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/DeathScreen"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 136.0
+offset_right = 220.0
+offset_bottom = 184.0
+text = "Quit"
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Ground and Walls" type="Node" parent="Environment"]
+
+[node name="LeftWall" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(-136, 192)
+scale = Vector2(0.0975536, -23.2731)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/LeftWall"]
+polygon = PackedVector2Array(-246.019, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.019, -16.156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/LeftWall"]
+position = Vector2(0, -0.171873)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="RightWall" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2776, 192)
+scale = Vector2(0.0975536, -23.2731)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/RightWall"]
+polygon = PackedVector2Array(-246.02, 15.8122, 246.019, 15.8122, 246.019, -16.156, -246.02, -16.156)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/RightWall"]
+position = Vector2(0, -0.171873)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(568, 552)
+scale = Vector2(3, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground"]
+polygon = PackedVector2Array(-242.667, -16, -242.667, 16, 250.667, 16, 250.667, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground"]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground5" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2048, 552)
+scale = Vector2(3, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground5"]
+polygon = PackedVector2Array(-242.667, -16, -242.667, 16, 250.667, 16, 250.667, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground5"]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground2" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(344, 88)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground2"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground2"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground3" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(704, 216)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground3"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground3"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground4" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(1104, 344)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground4"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground4"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground6" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(1520, 520)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground6"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground6"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground7" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(1520, 488)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground7"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground7"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground8" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(1520, 456)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground8"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground8"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground18" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(1904, 256)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground18"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground18"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground9" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2288, 520)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground9"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground9"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground10" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2288, 488)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground10"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground10"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground11" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2288, 456)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground11"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground11"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground12" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 520)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground12"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground12"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground13" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 488)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground13"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground13"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground14" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 456)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground14"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground14"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground15" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 424)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground15"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground15"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground16" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 392)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground16"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground16"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Ground17" type="StaticBody2D" parent="Environment/Ground and Walls"]
+position = Vector2(2616, 360)
+scale = Vector2(0.683, 1)
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="Environment/Ground and Walls/Ground17"]
+polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground and Walls/Ground17"]
+position = Vector2(-0.00012207, 0)
+shape = SubResource("RectangleShape2D_wbcps")
+
+[node name="Collectibles" type="Node" parent="Environment"]
+
+[node name="test_ingredient" parent="Environment/Collectibles" instance=ExtResource("4_03ede")]
 position = Vector2(304, 40)
 
-[node name="TestEnemy3" parent="." instance=ExtResource("3_ejc55")]
+[node name="test_ingredient2" parent="Environment/Collectibles" instance=ExtResource("4_03ede")]
+position = Vector2(2616, 304)
+
+[node name="Enemies" type="Node" parent="Environment"]
+
+[node name="TestEnemy" parent="Environment/Enemies" instance=ExtResource("3_ejc55")]
+position = Vector2(1600, 400)
+
+[node name="TestEnemy2" parent="Environment/Enemies" instance=ExtResource("3_ejc55")]
+position = Vector2(688, 160)
+
+[node name="TestEnemy3" parent="Environment/Enemies" instance=ExtResource("3_ejc55")]
 position = Vector2(1952, 496)
 
-[node name="TestEnemy4" parent="." instance=ExtResource("3_ejc55")]
+[node name="TestEnemy4" parent="Environment/Enemies" instance=ExtResource("3_ejc55")]
 position = Vector2(2272, 400)
-
-[node name="test_ingredient2" parent="." instance=ExtResource("4_03ede")]
-position = Vector2(2616, 304)
 
 [connection signal="button_down" from="CanvasLayer/PauseMenu/ResumeButton" to="PauseManager" method="_on_resume_button_button_down"]
 [connection signal="button_down" from="CanvasLayer/PauseMenu/QuitButton" to="PauseManager" method="_on_quit_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/DeathScreen/RestartButton" to="GameManager" method="_on_restart_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/DeathScreen/QuitButton" to="GameManager" method="_on_quit_button_button_down"]

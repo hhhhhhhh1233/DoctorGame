@@ -13,8 +13,8 @@ A Detective Doctor game where you must figure out your patients supernatural dis
   - [ ] Brewing Potions [Good/Bad]
     - [ ] Gathering Ingredients
       - [ ] Buying
-      - [ ] Foraging
-      - [ ] Killing
+      - [x] Foraging
+      - [x] Killing
   - [ ] Encyclopedia
     - [ ] Inventory
     - [ ] World

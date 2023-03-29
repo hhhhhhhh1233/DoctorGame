@@ -4,8 +4,11 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
 var health = 3
+var ingredients = {"Foraged": 0, "Enemy": 0}
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+
 
 func DecreaseHealth():
 	health -= 1
@@ -16,6 +19,7 @@ func DecreaseHealth():
 		queue_free()
 
 func _physics_process(delta):
+	print(ingredients)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta

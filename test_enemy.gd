@@ -4,10 +4,13 @@ var health = 3
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction = 1
 var speed = 200
-
+@onready var instancedObject = preload("res://test_ingredient_2.tscn")
 func DecreaseHealth():
 	health -= 1
 	if health == 0:
+		var myObject = instancedObject.instantiate()
+		myObject.global_transform = global_transform
+		get_parent().add_child(myObject)
 		queue_free()
 	$Polygon2D.modulate = Color(1, 0, 0)
 	await get_tree().create_timer(0.1).timeout

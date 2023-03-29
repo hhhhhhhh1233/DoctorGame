@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnu4lhhsju634"]
+[gd_scene load_steps=6 format=3 uid="uid://cnu4lhhsju634"]
 
 [ext_resource type="PackedScene" uid="uid://car1tw3uv2pid" path="res://player.tscn" id="1_yy8mo"]
 [ext_resource type="Script" path="res://PauseManager.gd" id="3_3vvnl"]
 [ext_resource type="PackedScene" uid="uid://dr33yfph6wx08" path="res://test_enemy.tscn" id="4_c3jvp"]
+[ext_resource type="PackedScene" uid="uid://b5utjxrcgh5tm" path="res://test_ingredient.tscn" id="4_jotaf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbcps"]
 size = Vector2(493.333, 31.9682)
@@ -95,3 +96,6 @@ position = Vector2(760, 328)
 
 [node name="TestEnemy2" parent="." instance=ExtResource("4_c3jvp")]
 position = Vector2(88, 496)
+
+[node name="test_ingredient" parent="." instance=ExtResource("4_jotaf")]
+position = Vector2(280, 504)

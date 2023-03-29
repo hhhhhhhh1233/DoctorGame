@@ -1,5 +1,5 @@
 # DoctorGame
-A Detective Doctor game.
+A Detective Doctor Game Prototype.
 
 # TODO
 - [ ] Core Game Loop

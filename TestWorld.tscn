@@ -24,7 +24,8 @@ limit_left = -300
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_top_margin = 0.7
+drag_top_margin = 1.0
+drag_bottom_margin = 0.6
 editor_draw_drag_margin = true
 
 [node name="Ground" type="StaticBody2D" parent="."]

@@ -13,23 +13,44 @@ script = ExtResource("1_u2pc6")
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 472.0
-offset_right = 232.0
-offset_bottom = 512.0
+offset_left = 496.0
+offset_top = 280.0
+offset_right = 616.0
+offset_bottom = 320.0
 focus_neighbor_top = NodePath("../QuitButton")
 focus_neighbor_bottom = NodePath("../QuitButton")
 text = "Play"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 536.0
-offset_right = 232.0
-offset_bottom = 576.0
+offset_left = 496.0
+offset_top = 344.0
+offset_right = 616.0
+offset_bottom = 384.0
 focus_neighbor_top = NodePath("../PlayButton")
 focus_neighbor_bottom = NodePath("../PlayButton")
 text = "Quit"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.208
+anchor_bottom = 0.136
+offset_left = 408.0
+offset_top = 136.0
+offset_right = 464.384
+offset_bottom = 119.872
+metadata/_edit_group_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 72.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 41
+text = "Doctor Game"
 
 [connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="QuitButton" to="." method="_on_quit_button_button_down"]

@@ -1,26 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://du3pc0xn31qhu"]
+[gd_scene load_steps=4 format=3 uid="uid://dr33yfph6wx08"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_qi1dq"]
-[ext_resource type="Texture2D" uid="uid://cgbm4bd554pyh" path="res://icon.svg" id="1_yrbah"]
+[ext_resource type="Script" path="res://test_enemy.gd" id="1_sbaht"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdv4v"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhd25"]
 size = Vector2(48, 48)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8n6ik"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecq5p"]
 size = Vector2(64, 56)
 
-[node name="Enemy" type="RigidBody2D"]
+[node name="TestEnemy" type="CharacterBody2D"]
 collision_layer = 20
 collision_mask = 3
-script = ExtResource("1_qi1dq")
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(4.76837e-07, 1.90735e-06)
-scale = Vector2(0.375, 0.375)
-texture = ExtResource("1_yrbah")
+script = ExtResource("1_sbaht")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_tdv4v")
+shape = SubResource("RectangleShape2D_nhd25")
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 8
@@ -28,7 +22,7 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_8n6ik")
+shape = SubResource("RectangleShape2D_ecq5p")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.788235, 0.239216, 0.917647, 1)
@@ -42,17 +36,11 @@ offset_bottom = 40.0
 text = "Enemy"
 
 [node name="RightGroundRay" type="RayCast2D" parent="."]
-position = Vector2(32, 8)
+position = Vector2(24, 8)
 target_position = Vector2(0, 24)
 
 [node name="LeftGroundRay" type="RayCast2D" parent="."]
-position = Vector2(-32, 8)
+position = Vector2(-24, 8)
 target_position = Vector2(0, 24)
-
-[node name="RightRay" type="RayCast2D" parent="."]
-target_position = Vector2(40, 0)
-
-[node name="LeftRay" type="RayCast2D" parent="."]
-target_position = Vector2(-40, 0)
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

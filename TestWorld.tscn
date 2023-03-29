@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://car1tw3uv2pid" path="res://player.tscn" id="1_yy8mo"]
 [ext_resource type="Script" path="res://PauseManager.gd" id="3_3vvnl"]
-[ext_resource type="PackedScene" uid="uid://du3pc0xn31qhu" path="res://enemy.tscn" id="3_4sh1d"]
+[ext_resource type="PackedScene" uid="uid://dr33yfph6wx08" path="res://test_enemy.tscn" id="4_c3jvp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbcps"]
 size = Vector2(493.333, 31.9682)
@@ -11,7 +11,6 @@ size = Vector2(493.333, 31.9682)
 
 [node name="Player" parent="." instance=ExtResource("1_yy8mo")]
 SPEED = 500.0
-JUMP_VELOCITY = -800.0
 
 [node name="Camera" type="Camera2D" parent="Player"]
 limit_left = -300
@@ -30,6 +29,7 @@ offset_right = 80.0
 offset_bottom = 24.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Player/Camera/Panel"]
+layout_mode = 0
 offset_right = 160.0
 offset_bottom = 40.0
 text = "            Paused"
@@ -48,18 +48,16 @@ position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="Ground2" type="StaticBody2D" parent="."]
-position = Vector2(840, 408)
+position = Vector2(840, 376)
 scale = Vector2(0.683, 1)
 collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="Ground2"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-245.974, 16, 245.974, 16, 245.974, -16, -245.974, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
 position = Vector2(-0.00012207, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wbcps")
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
@@ -88,9 +86,12 @@ polygon = PackedVector2Array(-246.02, 15.8122, 246.019, 15.8122, 246.019, -16.15
 position = Vector2(0, -0.171873)
 shape = SubResource("RectangleShape2D_wbcps")
 
-[node name="Enemy" parent="." instance=ExtResource("3_4sh1d")]
-position = Vector2(240, 416)
-
 [node name="PauseManager" type="Node" parent="."]
 process_mode = 3
 script = ExtResource("3_3vvnl")
+
+[node name="TestEnemy" parent="." instance=ExtResource("4_c3jvp")]
+position = Vector2(760, 328)
+
+[node name="TestEnemy2" parent="." instance=ExtResource("4_c3jvp")]
+position = Vector2(88, 496)

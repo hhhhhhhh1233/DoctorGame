@@ -3,13 +3,13 @@ A Detective Doctor game where you must figure out your patients supernatural dis
 
 # TODO
 - [ ] Core Game Loop
-  - [ ] Character Controller
+  - [x] Character Controller
     - [x] Moving Around
-    - [ ] Combat
+    - [x] Combat
   - [ ] Enemies
     - [ ] Moving Around
-    - [ ] Taking Damage
-    - [ ] Enemies Attacking
+    - [x] Taking Damage
+    - [x] Enemies Dealing Damage
   - [ ] Brewing Potions [Good/Bad]
     - [ ] Gathering Ingredients
       - [ ] Buying
